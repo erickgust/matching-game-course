@@ -1,8 +1,13 @@
+import "./style.css";
 import { CardGame } from "../../CardGame";
 
 export function BoardGame (amountCards) {
     const $htmlCardGame = CardGame();
-    const $htmlBoardGame = $htmlCardGame.repeat(amountCards);
+    const $htmlContent = $htmlCardGame.repeat(amountCards);
 
-    return $htmlBoardGame;
+    return `
+        <section class="board-game">
+            ${$htmlContent}
+        </section>
+    `;
 }
